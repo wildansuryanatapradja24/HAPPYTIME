@@ -105,12 +105,12 @@ setInterval(createHeart,300);
 
 /* Musik */
 
-function playMusic(){
+function playMusic() {
+    const music = document.getElementById("music");
 
-    document
-    .getElementById("music")
-    .play();
-
+    music.play().catch(err => {
+        console.log("Gagal memutar musik:", err);
+    });
 }
 
 /* Pesan Rahasia */
